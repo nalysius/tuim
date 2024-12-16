@@ -3,7 +3,6 @@ name = "tuim"
 version = "0.1.0"
 edition = "2021"
 license = "0BSD"
-license-file = "LICENSE.txt"
 description = "A library to build TUI."
 repository = "https://github.com/nalysius/tuim"
 keywords = ["tui", "terminal", "ui", "text-based user interface"]
