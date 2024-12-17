@@ -1,5 +1,7 @@
 /// The components module contains the UI components.
 
+pub mod table;
+
 /// The UIElement trait contains methods to be implemented by all
 /// UI elements (e.g. Table)
 pub trait UIElement {
@@ -15,8 +17,8 @@ pub trait UIElement {
 	/// Returns the title of the UI element.
 	///
 	/// By default the title is empty.
-	fn title(&self) -> String {
-		"".to_string()
+	fn title(&self) -> &str {
+		""
 	}
 	/// Returns the width of the element.
 	fn width(&self) -> Size;
@@ -33,6 +35,7 @@ pub enum Position {
 }
 
 /// Size represents a size with a unit.
+#[derive(Clone)]
 pub enum Size {
 	/// Compute the size automatically, based on the size of the siblings.
 	/// The default is to share the space with siblings elements.
