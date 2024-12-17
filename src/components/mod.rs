@@ -43,10 +43,10 @@ pub enum Size {
 	Percents(u8),
 }
 
-/// Represents a layout type.
+/// Represents a layout.
 ///
-/// A layout type is a way to display the UI elements contained in a layout.
-pub enum LayoutType {
+/// A layout is a way to display the UI elements in a container.
+pub enum Layout {
 	/// Horizontal
 	/// Left to right
 	Horizontal,
@@ -57,12 +57,12 @@ pub enum LayoutType {
 	Tabbed,
 }
 
-/// A layout is a container for UI elements.
-pub struct Layout {
-	/// The type of the layout.
+/// A container for UI elements.
+pub struct Container {
+	/// The layout.
 	///
-	/// The layout's elements will be displayed using the type.
-	pub direction: LayoutType,
+	/// The elements will be displayed using this layout.
+	pub layout: Layout,
 	/// The UI elements to display.
 	pub elements: Vec<Box<dyn UIElement>>,
 }
